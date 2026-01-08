@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           setCurrentBrandIndex((prev) => (prev + 1) % brands.length);
         }
       }
-    }, isDeleting ? 50 : 120);
+    }, isDeleting ? 60 : 90);
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentBrandIndex]);
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto mb-20">
-        <a className="relative w-full sm:w-auto h-12 px-6 bg-slate-900 text-white font-semibold text-sm rounded-lg hover:bg-slate-800 transition-all flex items-center justify-center gap-2.5 group shadow-lg hover:shadow-xl overflow-hidden transform hover:-translate-y-0.5" href="#">
+        <a className="relative w-full sm:w-auto h-12 px-6 bg-slate-900 text-white font-semibold text-sm rounded-xl hover:bg-slate-800 transition-all duration-200 ease-smooth flex items-center justify-center gap-2.5 group shadow-elevation-2 hover:shadow-elevation-3 overflow-hidden" href="#">
           {/* Chrome Icon - Monochrome outline style */}
           <svg className="w-5 h-5 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
@@ -62,9 +62,9 @@ const Hero: React.FC = () => {
             <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
           </svg>
           <span className="relative z-10">Install for Chrome</span>
-          <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-500 z-0"></div>
+          <div className="absolute inset-0 bg-white/5 -translate-x-full group-hover:translate-x-full transition-transform duration-500 z-0"></div>
         </a>
-        <a className="w-full sm:w-auto h-12 px-6 bg-white border border-slate-200 text-slate-900 font-semibold text-sm rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md" href="#">
+        <a className="w-full sm:w-auto h-12 px-6 bg-white border border-slate-200 text-slate-900 font-semibold text-sm rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 ease-smooth flex items-center justify-center gap-2.5 shadow-elevation-1 hover:shadow-elevation-2" href="#">
           <span className="material-icons-round text-lg text-slate-400">play_circle</span>
           <span>Watch Demo</span>
         </a>
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
       {/* Hero UI Mockup */}
       <div className="relative w-full max-w-5xl mx-auto perspective-1000 group">
         <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-orange-500/30 rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition duration-1000"></div>
-        <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-2xl bg-white/90 backdrop-blur-md transform transition-transform duration-500 hover:scale-[1.01]">
+        <div className="relative rounded-xl overflow-hidden border border-slate-200 shadow-elevation-4 bg-white/90 backdrop-blur-md transition-shadow duration-300 ease-smooth hover:shadow-elevation-4">
           <div className="h-10 bg-slate-50 border-b border-slate-200 flex items-center px-4 gap-2 justify-between">
             <div className="flex gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div>

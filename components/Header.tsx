@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         </div>
         
         <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-600">
-          {['Features', 'Showcase', 'Pricing', 'Help'].map((item) => (
+          {['Showcase', 'Pricing'].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-primary transition-colors">
               {item}
             </a>
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           <a className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors hidden sm:block" href="#">
             Log in
           </a>
-          <a className="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all shadow-md" href="#">
+          <a className="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-200 ease-smooth shadow-elevation-1 hover:shadow-elevation-2" href="#">
             Get Started
           </a>
           {/* Mobile menu button */}
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-white border-b border-slate-200 p-4 flex flex-col gap-4 shadow-lg">
-           {['Features', 'Showcase', 'Pricing', 'Help'].map((item) => (
+           {['Showcase', 'Pricing'].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} className="text-slate-600 font-medium hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               {item}
             </a>

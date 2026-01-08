@@ -20,7 +20,7 @@ const Features: React.FC = () => {
           <div className="absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent to-yellow-200/20 opacity-0 group-hover:opacity-100 group-hover:animate-shine"></div>
           <div className="relative z-10 h-full flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 bg-yellow-100 text-yellow-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+              <div className="w-12 h-12 bg-yellow-100 text-yellow-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-200 transition-colors duration-200 shadow-sm">
                 <span className="material-icons-round text-2xl">speed</span>
               </div>
               <h3 className="text-2xl font-bold mb-3 text-slate-900">Design 10x Faster</h3>
@@ -40,7 +40,7 @@ const Features: React.FC = () => {
         <div className="md:col-span-1 md:row-span-2 bento-card p-8 rounded-3xl group relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <div className="relative z-10 h-full flex flex-col">
-            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+            <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors duration-200 shadow-sm">
               <span className="material-icons-round text-2xl">content_paste</span>
             </div>
             <h3 className="text-xl font-bold mb-3 text-slate-900">Instant Clone</h3>
@@ -64,7 +64,7 @@ const Features: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-50 via-white to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform shadow-sm">
+              <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors duration-200 shadow-sm">
                 <span className="material-icons-round text-xl">palette</span>
               </div>
               <span className="text-xs font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded uppercase">Style</span>
@@ -81,7 +81,7 @@ const Features: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-tr from-green-50 via-white to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform shadow-sm">
+              <div className="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-200 transition-colors duration-200 shadow-sm">
                 <span className="material-icons-round text-xl">check_circle</span>
               </div>
               <span className="text-xs font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded uppercase">Ready</span>
@@ -98,7 +98,7 @@ const Features: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-tl from-orange-50 via-white to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform shadow-sm">
+              <div className="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center group-hover:bg-orange-200 transition-colors duration-200 shadow-sm">
                 <span className="material-icons-round text-xl">devices</span>
               </div>
               <span className="text-xs font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded uppercase">View</span>

@@ -11,7 +11,7 @@ const Steps: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         {/* Step 1 */}
-        <div className="bg-white border border-slate-200 p-10 rounded-3xl flex flex-col md:flex-row gap-12 items-center hover:border-slate-300 hover:shadow-lg transition-all shadow-sm">
+        <div className="bg-white border border-slate-200 p-10 rounded-3xl flex flex-col md:flex-row gap-12 items-center hover:border-slate-300 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 ease-smooth">
           <div className="md:w-1/2">
             <span className="text-primary font-mono text-sm mb-4 block tracking-wider font-bold">01. INSTALLATION</span>
             <h3 className="text-3xl font-bold mb-6 text-slate-900">Install the extension</h3>
@@ -50,7 +50,7 @@ const Steps: React.FC = () => {
         </div>
 
         {/* Step 2 */}
-        <div className="bg-white border border-slate-200 p-10 rounded-3xl flex flex-col md:flex-row-reverse gap-12 items-center hover:border-slate-300 hover:shadow-lg transition-all shadow-sm">
+        <div className="bg-white border border-slate-200 p-10 rounded-3xl flex flex-col md:flex-row-reverse gap-12 items-center hover:border-slate-300 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300 ease-smooth">
           <div className="md:w-1/2">
             <span className="text-primary font-mono text-sm mb-4 block tracking-wider font-bold">02. SELECT & CLONE</span>
             <h3 className="text-3xl font-bold mb-6 text-slate-900">Pick any element</h3>
@@ -63,7 +63,7 @@ const Steps: React.FC = () => {
           </div>
           <div className="md:w-1/2 w-full h-64 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center relative overflow-hidden shadow-inner group">
             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-            <div className="bg-white border-2 border-primary text-slate-900 px-8 py-4 rounded-lg relative cursor-pointer transform group-hover:scale-105 transition-transform duration-300 shadow-xl">
+            <div className="bg-white border-2 border-primary text-slate-900 px-8 py-4 rounded-lg relative cursor-pointer shadow-elevation-3 transition-shadow duration-300 ease-smooth">
               <span className="font-bold text-lg">Sign Up Button</span>
               <div className="absolute -top-3 -right-3 bg-primary text-black text-[10px] font-bold px-2 py-1 rounded-full shadow-sm flex items-center gap-1">
                 <span className="material-icons-round text-[10px]">ads_click</span> Selected

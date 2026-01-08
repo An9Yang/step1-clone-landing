@@ -28,12 +28,24 @@
                     borderRadius: {
                         DEFAULT: "0.5rem",
                     },
+                    boxShadow: {
+                        // 4级专业阴影系统
+                        'elevation-1': '0 2px 4px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06)',
+                        'elevation-2': '0 4px 8px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.08)',
+                        'elevation-3': '0 12px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04)',
+                        'elevation-4': '0 24px 48px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.04)',
+                    },
+                    transitionTimingFunction: {
+                        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+                        'smooth-in': 'cubic-bezier(0.4, 0, 1, 1)',
+                        'smooth-out': 'cubic-bezier(0, 0, 0.2, 1)',
+                    },
                     animation: {
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'float': 'float 6s ease-in-out infinite',
                         'shine': 'shine 1.5s ease-in-out infinite',
                         'glow': 'glow 2s ease-in-out infinite alternate',
-                        'gradient-flow': 'gradient-flow 3s ease infinite',
+                        'gradient-flow': 'gradient-flow 4s ease infinite',
                     },
                     keyframes: {
                         float: {
@@ -78,13 +90,13 @@
         }
         .bento-card {
             background: white;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .bento-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: rgba(250, 204, 21, 0.5);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
+            border-color: rgba(226, 232, 240, 0.8);
         }
         .bg-dots-pattern {
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
@@ -97,7 +109,7 @@
         .carousel-item {
             transform-style: preserve-3d;
             backface-visibility: hidden;
-            transition: all 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 <script type="importmap">

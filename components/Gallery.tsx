@@ -208,7 +208,7 @@ const Gallery: React.FC = () => {
           <button
             aria-label="Previous slide"
             onClick={handlePrev}
-            className="absolute left-4 lg:left-10 z-40 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-lg text-slate-600 flex items-center justify-center hover:bg-slate-50 hover:text-primary hover:scale-110 transition-all"
+            className="absolute left-4 lg:left-10 z-40 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-elevation-2 text-slate-600 flex items-center justify-center hover:bg-slate-50 hover:shadow-elevation-3 transition-all duration-200 ease-smooth"
           >
             <span className="material-icons-round text-2xl">arrow_back</span>
           </button>
@@ -253,7 +253,7 @@ const Gallery: React.FC = () => {
                 {/* Hover Overlay - only for active slide */}
                 {index === activeIndex && (
                   <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px] opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4 z-20">
-                    <button className="bg-primary text-slate-900 font-bold px-6 py-3 rounded-full shadow-xl flex items-center gap-2 hover:bg-yellow-400 hover:scale-105 transition-all">
+                    <button className="bg-primary text-slate-900 font-bold px-6 py-3 rounded-full shadow-elevation-3 flex items-center gap-2 hover:bg-yellow-400 hover:shadow-elevation-4 transition-all duration-200 ease-smooth">
                       <span className="material-icons-round">visibility</span> View Live Demo
                     </button>
                     <div className="flex gap-2">
@@ -285,21 +285,21 @@ const Gallery: React.FC = () => {
           <button
             aria-label="Next slide"
             onClick={handleNext}
-            className="absolute right-4 lg:right-10 z-40 w-12 h-12 rounded-full bg-slate-900 text-white border border-transparent shadow-lg flex items-center justify-center hover:bg-slate-800 hover:scale-110 transition-all"
+            className="absolute right-4 lg:right-10 z-40 w-12 h-12 rounded-full bg-white border border-slate-200 shadow-elevation-2 text-slate-600 flex items-center justify-center hover:bg-slate-50 hover:shadow-elevation-3 transition-all duration-200 ease-smooth"
           >
             <span className="material-icons-round text-2xl">arrow_forward</span>
           </button>
 
           {/* Progress Indicators */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2.5">
             {slides.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`h-2.5 rounded-full transition-all duration-300 ease-smooth ${
                   idx === activeIndex
-                    ? 'w-8 bg-slate-900'
-                    : 'w-2 bg-slate-300 hover:bg-slate-400'
+                    ? 'w-10 bg-slate-900'
+                    : 'w-2.5 bg-slate-300 hover:bg-slate-400'
                 }`}
               />
             ))}
