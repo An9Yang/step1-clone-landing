@@ -7,7 +7,7 @@ const Features: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-yellow-100/50 rounded-full blur-[100px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 relative z-10">
-        <span className="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">Why Clonable?</span>
+        <span className="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">Why Step1?</span>
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Rapid Design Kit</h2>
         <p className="text-lg text-slate-500 max-w-2xl mx-auto font-light">Don't start from scratch when you can iterate on perfection.</p>
       </div>

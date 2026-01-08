@@ -24,7 +24,7 @@ const FAQ: React.FC = () => {
               <span className="material-icons-round text-slate-400 group-open:rotate-180 transition-transform">keyboard_arrow_down</span>
             </summary>
             <div className="px-6 text-slate-600">
-              Yes! Clonable works with most modern platforms. It detects the style and helps you replicate it anywhere.
+              Yes! Step1 works with most modern platforms. It detects the style and helps you replicate it anywhere.
             </div>
           </details>
 

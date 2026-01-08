@@ -34,7 +34,11 @@ const Steps: React.FC = () => {
                   <div className="w-2 h-2 rounded-full bg-green-400"></div>
                 </div>
                 <div className="flex-1 bg-white h-5 rounded border border-slate-200 mx-2"></div>
-                <div className="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-[8px] font-bold text-black shadow-sm ring-2 ring-primary/20">C</div>
+                <svg className="w-4 h-4" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="181.119" height="181.119" rx="40" fill="white"/>
+                    <path d="M55.7429 76.0664L105.052 55.7429L125.376 105.052" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M76.0664 125.376L105.052 55.7429" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
               </div>
               <div className="flex-1 flex items-center justify-center p-4">
                 <div className="text-center">

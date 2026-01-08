@@ -7,10 +7,12 @@ const Header: React.FC = () => {
     <header className="fixed top-0 w-full z-50 border-b border-border-light bg-white/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-black font-bold text-lg shadow-[0_0_10px_rgba(250,204,21,0.5)]">
-            C
-          </div>
-          <span className="font-bold text-lg tracking-tight text-slate-900">Clonable</span>
+          <svg className="w-8 h-8" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="181.119" height="181.119" rx="40" fill="white" stroke="#e2e8f0" strokeWidth="2"/>
+            <path d="M55.7429 76.0664L105.052 55.7429L125.376 105.052" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M76.0664 125.376L105.052 55.7429" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="font-bold text-lg tracking-tight text-slate-900">Step1</span>
         </div>
         
         <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-600">

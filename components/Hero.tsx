@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             <div className="flex-1 text-center">
               <div className="bg-white border border-slate-200 rounded py-0.5 px-3 text-[10px] text-slate-400 font-mono inline-flex items-center gap-1">
                 <span className="material-icons-round text-[10px]">lock</span>
-                clonable.io/app
+                step1.app
               </div>
             </div>
             <div className="w-10"></div>

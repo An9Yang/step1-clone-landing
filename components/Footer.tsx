@@ -7,8 +7,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-black font-bold text-sm">C</div>
-              <span className="font-bold text-xl text-slate-900">Clonable</span>
+              <svg className="w-8 h-8" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="181.119" height="181.119" rx="40" fill="white" stroke="#e2e8f0" strokeWidth="2"/>
+                <path d="M55.7429 76.0664L105.052 55.7429L125.376 105.052" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M76.0664 125.376L105.052 55.7429" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="font-bold text-xl text-slate-900">Step1</span>
             </div>
             <p className="text-slate-500 text-sm mb-6 max-w-xs leading-relaxed">
               Tools for modern web design and cloning for everyone.
@@ -45,7 +49,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© 2024 Clonable. All rights reserved.</p>
+          <p>© 2024 Step1. All rights reserved.</p>
           <div className="flex gap-8 mt-4 md:mt-0">
             <a className="hover:text-slate-900 transition-colors" href="#">Privacy Policy</a>
             <a className="hover:text-slate-900 transition-colors" href="#">Terms of Service</a>
