@@ -37,7 +37,7 @@ const Features: React.FC = () => {
         </div>
 
         {/* Tall Feature */}
-        <div className="md:col-span-1 md:row-span-2 bento-card p-8 rounded-3xl group relative overflow-hidden mt-0 md:mt-12">
+        <div className="md:col-span-1 md:row-span-2 bento-card p-8 rounded-3xl group relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <div className="relative z-10 h-full flex flex-col">
             <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">

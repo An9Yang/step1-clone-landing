@@ -85,9 +85,14 @@
             background-size: 20px 20px;
         }
         .carousel-container {
-            perspective: 1000px;
+            perspective: 1200px;
+            perspective-origin: center center;
         }
-        /* React Transition Group classes could go here, but we will handle manual classes in React */
+        .carousel-item {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: all 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
     </style>
 <script type="importmap">
 {
