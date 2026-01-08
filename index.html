@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Clonable - Design Cloning Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#facc15",
+                        "background-light": "#fafafa",
+                        "surface-light": "#ffffff",
+                        "text-primary": "#0f172a",
+                        "text-secondary": "#475569",
+                        "border-light": "#e2e8f0",
+                        "background-dark": "#09090b",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        mono: ["Fira Code", "monospace"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'shine': 'shine 1.5s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shine: {
+                            '0%': { left: '-100%' },
+                            '100%': { left: '200%' }
+                        },
+                        glow: {
+                            '0%': { opacity: '0.3' },
+                            '100%': { opacity: '0.6' }
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .hero-gradient-overlay {
+            background: radial-gradient(circle at center, rgba(250, 204, 21, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+        .bento-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: rgba(250, 204, 21, 0.5);
+        }
+        .bg-dots-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .carousel-container {
+            perspective: 1000px;
+        }
+        /* React Transition Group classes could go here, but we will handle manual classes in React */
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light text-text-primary transition-colors duration-300 antialiased selection:bg-primary selection:text-black">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
