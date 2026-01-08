@@ -18,13 +18,13 @@ const CTA: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-slate-900 px-8 font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2" href="#">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:animate-[shine_1s_infinite]"></div>
-              <span className="mr-2">Get Started Free</span>
-              <span className="material-icons-round text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+            <a className="group relative h-12 px-6 bg-slate-900 text-white font-semibold text-sm rounded-lg hover:bg-slate-800 transition-all flex items-center justify-center gap-2.5 shadow-lg hover:shadow-xl overflow-hidden transform hover:-translate-y-0.5" href="#">
+              <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-500 z-0"></div>
+              <span className="relative z-10">Get Started Free</span>
+              <span className="material-icons-round text-lg relative z-10 transition-transform group-hover:translate-x-0.5">arrow_forward</span>
             </a>
-            <a className="group inline-flex h-12 items-center justify-center rounded-full bg-white border border-slate-200 px-8 font-medium text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-slate-200 focus:ring-offset-2" href="#">
-              <img alt="Community" className="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7fFuVhQ1LiSlE_m0qKDzDyXwEq1in76Co733hSGrrpQrGqZfBj69DWyPmfP9U8AWxzy07j4bdjCEL0mz3kfTPMos2xkupw6lII6946bcLvcw8xSQVHnB7yoeHUi4GBFcEK1oP6yqc6xt2KUkaWlD6nawjlHntLb35tlK6px7wa_mIG0fldZ_-o_dSjDj2gmJ78TX6CACVXDdKie8LvFwAyO5HF9lX33H0uQy63SxgKpRsybT03yw_PKDZpNhxLQ8Cco8v3-9h-Rm7"/>
+            <a className="h-12 px-6 bg-white border border-slate-200 text-slate-900 font-semibold text-sm rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md" href="#">
+              <span className="material-icons-round text-lg text-slate-400">group</span>
               <span>Community</span>
             </a>
           </div>

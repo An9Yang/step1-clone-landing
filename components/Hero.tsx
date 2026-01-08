@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const brands = ['Apple', 'Stripe', 'Linear', 'Venmo', 'Framer'];
 
 const Hero: React.FC = () => {
+  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentBrand = brands[currentBrandIndex];
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayText.length < currentBrand.length) {
+          setDisplayText(currentBrand.substring(0, displayText.length + 1));
+        } else {
+          // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting
+        if (displayText.length > 0) {
+          setDisplayText(currentBrand.substring(0, displayText.length - 1));
+        } else {
+          setIsDeleting(false);
+          setCurrentBrandIndex((prev) => (prev + 1) % brands.length);
+        }
+      }
+    }, isDeleting ? 50 : 120);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentBrandIndex]);
+
   return (
     <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center py-20 lg:py-28 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] hero-gradient-overlay -z-10 pointer-events-none"></div>
@@ -16,23 +48,33 @@ const Hero: React.FC = () => {
         <span className="material-icons-round text-xs opacity-50 group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
       </div>
 
-      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 max-w-4xl mx-auto leading-[1.1] text-slate-900">
-        Clone <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-500">Apple</span>,
-        <span className="block text-slate-900 mt-2">Make it yours.</span>
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 max-w-5xl mx-auto leading-tight text-slate-900">
+        Clone{' '}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-500 inline-block min-w-[120px] md:min-w-[180px] bg-[length:200%_200%] animate-gradient-flow">
+          {displayText}
+        </span>
+        , Make it Yours.
       </h1>
 
-      <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-        Copy styles from any site. Apply them to yours. Pixel-perfect.
+      <p className="text-lg md:text-xl text-slate-600 max-w-xl mx-auto mb-10 leading-relaxed font-light">
+        Copy style from any site, apply them to yours.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto mb-20">
-        <a className="relative w-full sm:w-auto px-5 py-2.5 bg-primary text-black font-bold text-sm rounded-lg hover:bg-yellow-400 transition-all flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(250,204,21,0.3)] hover:shadow-[0_0_25px_rgba(250,204,21,0.5)] overflow-hidden transform hover:-translate-y-0.5" href="#">
-          <span className="relative z-10">Install Now</span>
-          <span className="material-icons-round text-lg group-hover:translate-x-0.5 transition-transform relative z-10">download</span>
-          <div className="absolute inset-0 bg-white/40 -translate-x-full group-hover:animate-shine z-0"></div>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto mb-20">
+        <a className="relative w-full sm:w-auto h-12 px-6 bg-slate-900 text-white font-semibold text-sm rounded-lg hover:bg-slate-800 transition-all flex items-center justify-center gap-2.5 group shadow-lg hover:shadow-xl overflow-hidden transform hover:-translate-y-0.5" href="#">
+          {/* Chrome Icon - Monochrome outline style */}
+          <svg className="w-5 h-5 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+          </svg>
+          <span className="relative z-10">Install for Chrome</span>
+          <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-500 z-0"></div>
         </a>
-        <a className="w-full sm:w-auto px-5 py-2.5 bg-white border border-slate-200 text-slate-900 font-medium text-sm rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md" href="#">
-          <span className="material-icons-round text-lg text-primary">play_arrow</span>
+        <a className="w-full sm:w-auto h-12 px-6 bg-white border border-slate-200 text-slate-900 font-semibold text-sm rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md" href="#">
+          <span className="material-icons-round text-lg text-slate-400">play_circle</span>
           <span>Watch Demo</span>
         </a>
       </div>
@@ -57,7 +99,7 @@ const Hero: React.FC = () => {
           </div>
           <div className="aspect-[16/9] w-full bg-slate-50 relative flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 bg-dots-pattern opacity-50"></div>
-            
+
             {/* Extracted Style Card */}
             <div className="absolute top-[20%] left-[15%] w-[300px] bg-white rounded-xl border border-slate-200 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] p-5 z-20 animate-float">
               <div className="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
