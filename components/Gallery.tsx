@@ -195,9 +195,6 @@ const Gallery: React.FC = () => {
     <section className="py-24 overflow-hidden bg-slate-50" id="showcase">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-500 mb-6">
-            <span className="material-icons-round text-sm text-primary">layers</span> Gallery
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
             Clone Gallery
           </h2>

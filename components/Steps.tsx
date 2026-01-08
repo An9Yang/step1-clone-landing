@@ -4,9 +4,6 @@ const Steps: React.FC = () => {
   return (
     <section className="py-24 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20 relative z-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-600 mb-6">
-          <span className="material-icons-round text-sm text-primary">bolt</span> Quick Integration
-        </div>
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-slate-900 tracking-tight">Setup in minutes</h2>
         <p className="text-xl text-slate-500 font-light">Simple steps to supercharge your design workflow.</p>
       </div>

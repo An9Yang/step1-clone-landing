@@ -37,20 +37,11 @@ const Hero: React.FC = () => {
     <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center py-20 lg:py-28 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] hero-gradient-overlay -z-10 pointer-events-none"></div>
       <div className="absolute top-20 right-20 w-32 h-32 bg-primary/20 rounded-full blur-[60px] animate-pulse-slow -z-10"></div>
-      <div className="absolute bottom-20 left-20 w-40 h-40 bg-purple-500/10 rounded-full blur-[80px] -z-10"></div>
-
-      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-600 mb-8 shadow-sm hover:border-primary/50 transition-colors cursor-pointer group">
-        <span className="flex h-2 w-2 relative">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-        </span>
-        <span className="group-hover:text-slate-900 transition-colors">v2.0 Available</span>
-        <span className="material-icons-round text-xs opacity-50 group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
-      </div>
+      <div className="absolute bottom-20 left-20 w-40 h-40 bg-amber-500/10 rounded-full blur-[80px] -z-10"></div>
 
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 max-w-5xl mx-auto leading-tight text-slate-900">
         Clone{' '}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-fuchsia-500 to-indigo-500 inline-block min-w-[120px] md:min-w-[180px] bg-[length:200%_200%] animate-gradient-flow">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-500 to-sky-400 inline-block min-w-[120px] md:min-w-[180px] bg-[length:200%_200%] animate-gradient-flow">
           {displayText}
         </span>
         , Make it Yours.
