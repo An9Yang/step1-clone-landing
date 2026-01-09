@@ -49,10 +49,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© 2024 Step1. All rights reserved.</p>
+          <p>© 2025 Step1. All rights reserved.</p>
           <div className="flex gap-8 mt-4 md:mt-0">
-            <a className="hover:text-slate-900 transition-colors" href="#">Privacy Policy</a>
-            <a className="hover:text-slate-900 transition-colors" href="#">Terms of Service</a>
+            <a className="hover:text-slate-900 transition-colors" href="#privacy">Privacy Policy</a>
+            <a className="hover:text-slate-900 transition-colors" href="#terms">Terms of Service</a>
           </div>
         </div>
       </div>

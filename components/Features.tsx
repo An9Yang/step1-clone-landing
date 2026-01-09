@@ -25,7 +25,7 @@ const Features: React.FC = () => {
               <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:16px_16px]"></div>
               <div className="relative text-center">
                 <div className="w-16 h-16 bg-yellow-100 text-yellow-700 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-200 transition-colors duration-200 shadow-sm">
-                  <span className="material-icons-round text-3xl">speed</span>
+                  <span className="material-icons-round text-3xl">language</span>
                 </div>
                 <div className="flex gap-2 justify-center opacity-60 group-hover:opacity-100 transition-opacity">
                   <div className="h-2 rounded-full bg-slate-300 w-8 group-hover:bg-primary transition-colors"></div>
@@ -37,23 +37,23 @@ const Features: React.FC = () => {
             </div>
             {/* Text Area - Right */}
             <div className="md:w-1/2 flex flex-col justify-center">
-              <span className="text-primary font-mono text-xs mb-2 block tracking-wider font-bold">SPEED</span>
-              <h3 className="text-2xl font-bold mb-3 text-slate-900">Design 10x Faster</h3>
+              <span className="text-primary font-mono text-xs mb-2 block tracking-wider font-bold">SITE</span>
+              <h3 className="text-2xl font-bold mb-3 text-slate-900">Site Clone</h3>
               <p className="text-slate-600 leading-relaxed text-sm mb-4">
-                Save hours of design work. Stop struggling with layout details. Use ready-made styles and focus on your content instantly.
+                Clone entire websites with a single click. Capture layouts, styles, and structure instantly for your own projects.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-slate-600 text-sm">
                   <span className="w-5 h-5 bg-primary/20 text-yellow-700 rounded-full flex items-center justify-center">
                     <span className="material-icons-round text-xs">check</span>
                   </span>
-                  Instant style extraction
+                  Full page capture
                 </li>
                 <li className="flex items-center gap-2 text-slate-600 text-sm">
                   <span className="w-5 h-5 bg-primary/20 text-yellow-700 rounded-full flex items-center justify-center">
                     <span className="material-icons-round text-xs">check</span>
                   </span>
-                  One-click apply
+                  Editable output
                 </li>
               </ul>
             </div>
@@ -66,10 +66,10 @@ const Features: React.FC = () => {
           <div className="relative z-10 h-full flex flex-col">
             {/* Text Area - Top */}
             <div className="mb-4">
-              <span className="text-blue-600 font-mono text-xs mb-2 block tracking-wider font-bold">CLONE</span>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Instant Clone</h3>
+              <span className="text-blue-600 font-mono text-xs mb-2 block tracking-wider font-bold">COMPONENT</span>
+              <h3 className="text-xl font-bold mb-2 text-slate-900">Component Clone</h3>
               <p className="text-slate-600 leading-relaxed text-sm">
-                No setup needed. Copy the look and feel of any element straight to your project.
+                Extract individual UI components. Grab buttons, cards, navbars - any element you need.
               </p>
             </div>
             {/* Demo Area - Bottom (Larger) */}
@@ -99,12 +99,11 @@ const Features: React.FC = () => {
             {/* Text Area */}
             <div className="mb-3">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-purple-600 font-mono text-xs tracking-wider font-bold">STYLE</span>
-                <span className="text-xs font-bold bg-slate-100 text-slate-500 px-2 py-0.5 rounded uppercase">New</span>
+                <span className="text-purple-600 font-mono text-xs tracking-wider font-bold">EDIT</span>
               </div>
-              <h3 className="text-lg font-bold mb-1 text-slate-900">Fully Customizable</h3>
+              <h3 className="text-lg font-bold mb-1 text-slate-900">Visual Edit</h3>
               <p className="text-slate-600 leading-relaxed text-xs">
-                Adjust colors, spacing, and fonts to match your brand.
+                Edit designs visually without code. Point, click, and customize in real-time.
               </p>
             </div>
             {/* Visual Preview */}
@@ -125,24 +124,19 @@ const Features: React.FC = () => {
             {/* Text Area */}
             <div className="mb-3">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-green-600 font-mono text-xs tracking-wider font-bold">READY</span>
-                <span className="text-xs font-bold bg-green-100 text-green-600 px-2 py-0.5 rounded uppercase">Pro</span>
+                <span className="text-green-600 font-mono text-xs tracking-wider font-bold">STYLE</span>
               </div>
-              <h3 className="text-lg font-bold mb-1 text-slate-900">Ready to Use</h3>
+              <h3 className="text-lg font-bold mb-1 text-slate-900">Style Extraction</h3>
               <p className="text-slate-600 leading-relaxed text-xs">
-                Works with your favorite website builders instantly.
+                Extract colors, fonts, and spacing from any site. Build your design tokens automatically.
               </p>
             </div>
             {/* Visual Preview */}
             <div className="flex-1 bg-slate-50 rounded-xl border border-slate-200 p-3 flex items-center justify-center min-h-[100px]">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-white border border-slate-200 shadow-sm flex items-center justify-center">
-                  <span className="material-icons-round text-green-500">check_circle</span>
-                </div>
-                <div className="space-y-1">
-                  <div className="h-2 w-16 bg-slate-200 rounded"></div>
-                  <div className="h-2 w-12 bg-green-200 rounded"></div>
-                </div>
+                <div className="w-6 h-6 rounded-full bg-green-400 group-hover:scale-110 transition-transform"></div>
+                <div className="w-6 h-6 rounded-full bg-green-600 group-hover:scale-110 transition-transform delay-75"></div>
+                <div className="w-6 h-6 rounded-full bg-green-800 group-hover:scale-110 transition-transform delay-150"></div>
               </div>
             </div>
           </div>
