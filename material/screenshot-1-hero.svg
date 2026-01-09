@@ -1,0 +1,123 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Yellow radial gradient -->
+    <radialGradient id="yellowGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#facc15" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#facc15" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dot pattern -->
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#cbd5e1" opacity="0.5"/>
+    </pattern>
+
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.04"/>
+    </filter>
+
+    <filter id="shadowSmall" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="#fafafa"/>
+  <rect width="1280" height="800" fill="url(#dots)"/>
+  <ellipse cx="640" cy="320" rx="500" ry="400" fill="url(#yellowGlow)"/>
+
+  <!-- Browser mockup -->
+  <g transform="translate(180, 100)" filter="url(#shadow)">
+    <!-- Browser frame -->
+    <rect width="920" height="520" rx="16" fill="white"/>
+
+    <!-- Browser top bar -->
+    <rect width="920" height="48" rx="16" fill="#f8fafc"/>
+    <rect y="32" width="920" height="16" fill="#f8fafc"/>
+
+    <!-- Traffic lights -->
+    <circle cx="24" cy="24" r="6" fill="#f87171"/>
+    <circle cx="48" cy="24" r="6" fill="#fbbf24"/>
+    <circle cx="72" cy="24" r="6" fill="#4ade80"/>
+
+    <!-- URL bar -->
+    <rect x="100" y="12" width="720" height="24" rx="6" fill="#e2e8f0"/>
+    <text x="120" y="29" font-family="Inter, sans-serif" font-size="12" fill="#64748b">example.com</text>
+
+    <!-- Website content area -->
+    <rect x="24" y="64" width="872" height="432" rx="8" fill="#ffffff"/>
+
+    <!-- Mock website content -->
+    <rect x="48" y="88" width="200" height="24" rx="4" fill="#e2e8f0"/>
+    <rect x="48" y="128" width="400" height="48" rx="4" fill="#0f172a"/>
+    <rect x="48" y="192" width="320" height="16" rx="4" fill="#94a3b8"/>
+    <rect x="48" y="216" width="280" height="16" rx="4" fill="#94a3b8"/>
+
+    <!-- Button group -->
+    <rect x="48" y="260" width="120" height="44" rx="8" fill="#0f172a"/>
+    <rect x="184" y="260" width="120" height="44" rx="8" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- Card grid -->
+    <rect x="48" y="340" width="260" height="140" rx="12" fill="#f8fafc"/>
+    <rect x="324" y="340" width="260" height="140" rx="12" fill="#f8fafc"/>
+    <rect x="600" y="340" width="260" height="140" rx="12" fill="#f8fafc"/>
+
+    <!-- Selection overlay with dashed border -->
+    <rect x="44" y="256" width="128" height="52" rx="10" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="8 4"/>
+
+    <!-- Selection corner indicators -->
+    <rect x="40" y="252" width="12" height="12" rx="2" fill="#facc15"/>
+    <rect x="164" y="252" width="12" height="12" rx="2" fill="#facc15"/>
+    <rect x="40" y="300" width="12" height="12" rx="2" fill="#facc15"/>
+    <rect x="164" y="300" width="12" height="12" rx="2" fill="#facc15"/>
+  </g>
+
+  <!-- Floating Style Extracted Panel -->
+  <g transform="translate(80, 480)" filter="url(#shadowSmall)">
+    <rect width="280" height="180" rx="16" fill="white"/>
+
+    <!-- Panel header -->
+    <rect width="280" height="48" rx="16" fill="#fafafa"/>
+    <rect y="32" width="280" height="16" fill="#fafafa"/>
+
+    <!-- Checkmark icon -->
+    <circle cx="28" cy="24" r="12" fill="#22c55e"/>
+    <path d="M22 24L26 28L34 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="48" y="29" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Style Extracted</text>
+
+    <!-- Color palette -->
+    <text x="20" y="76" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#64748b">COLORS</text>
+    <circle cx="32" cy="100" r="12" fill="#0f172a"/>
+    <circle cx="60" cy="100" r="12" fill="#facc15"/>
+    <circle cx="88" cy="100" r="12" fill="#3b82f6"/>
+    <circle cx="116" cy="100" r="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <circle cx="144" cy="100" r="12" fill="#64748b"/>
+
+    <!-- Typography -->
+    <text x="20" y="136" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#64748b">FONT</text>
+    <text x="20" y="156" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#0f172a">Inter</text>
+    <text x="60" y="156" font-family="Inter, sans-serif" font-size="12" fill="#64748b">16px / 600</text>
+
+    <!-- Radius preview -->
+    <text x="170" y="136" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#64748b">RADIUS</text>
+    <rect x="170" y="145" width="24" height="24" rx="2" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+    <rect x="200" y="145" width="24" height="24" rx="6" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+    <rect x="230" y="145" width="24" height="24" rx="12" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+  </g>
+
+  <!-- Copy success badge -->
+  <g transform="translate(300, 540)" filter="url(#shadowSmall)">
+    <rect width="140" height="36" rx="18" fill="#0f172a"/>
+    <circle cx="22" cy="18" r="10" fill="#22c55e"/>
+    <path d="M17 18L20 21L27 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="23" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="white">Style Copied!</text>
+  </g>
+
+  <!-- Main headline -->
+  <text x="640" y="700" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#0f172a">Clone Any Design in Seconds</text>
+
+  <!-- Subheadline -->
+  <text x="640" y="750" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#475569">One click to capture layouts, styles, and code.</text>
+</svg>

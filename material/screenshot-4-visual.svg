@@ -1,0 +1,190 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Purple radial gradient -->
+    <radialGradient id="purpleGlow" cx="70%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#9333ea" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dot pattern -->
+    <pattern id="dots4" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#cbd5e1" opacity="0.4"/>
+    </pattern>
+
+    <!-- Shadow filter -->
+    <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+
+    <filter id="shadowSmall4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="#fafafa"/>
+  <rect width="1280" height="800" fill="url(#dots4)"/>
+  <ellipse cx="900" cy="400" rx="500" ry="400" fill="url(#purpleGlow)"/>
+
+  <!-- Main editor interface -->
+  <g transform="translate(60, 60)" filter="url(#shadow4)">
+    <!-- Main browser/editor frame -->
+    <rect width="860" height="680" rx="16" fill="white"/>
+
+    <!-- Top bar -->
+    <rect width="860" height="48" rx="16" fill="#f8fafc"/>
+    <rect y="32" width="860" height="16" fill="#f8fafc"/>
+
+    <!-- Traffic lights -->
+    <circle cx="22" cy="24" r="6" fill="#f87171"/>
+    <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
+    <circle cx="66" cy="24" r="6" fill="#4ade80"/>
+
+    <!-- Tab -->
+    <rect x="90" y="12" width="120" height="24" rx="6" fill="white"/>
+    <text x="110" y="29" font-family="Inter, sans-serif" font-size="12" fill="#0f172a">Preview</text>
+
+    <!-- Preview content area -->
+    <rect x="20" y="64" width="820" height="596" rx="8" fill="#fafafa"/>
+
+    <!-- Mock website preview -->
+    <!-- Header -->
+    <rect x="40" y="84" width="780" height="56" rx="8" fill="white"/>
+    <rect x="60" y="104" width="80" height="16" rx="4" fill="#0f172a"/>
+    <rect x="680" y="100" width="120" height="24" rx="6" fill="#9333ea"/>
+
+    <!-- Hero section -->
+    <rect x="40" y="160" width="780" height="200" rx="12" fill="white"/>
+    <rect x="80" y="200" width="400" height="32" rx="6" fill="#0f172a"/>
+    <rect x="80" y="248" width="320" height="16" rx="4" fill="#94a3b8"/>
+    <rect x="80" y="276" width="280" height="16" rx="4" fill="#94a3b8"/>
+
+    <!-- Selected button element -->
+    <rect x="80" y="316" width="140" height="44" rx="8" fill="#9333ea"/>
+    <text x="150" y="344" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="white">Get Started</text>
+
+    <!-- Selection highlight on button -->
+    <rect x="76" y="312" width="148" height="52" rx="10" fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="8 4"/>
+    <rect x="72" y="308" width="12" height="12" rx="2" fill="#9333ea"/>
+    <rect x="216" y="308" width="12" height="12" rx="2" fill="#9333ea"/>
+    <rect x="72" y="356" width="12" height="12" rx="2" fill="#9333ea"/>
+    <rect x="216" y="356" width="12" height="12" rx="2" fill="#9333ea"/>
+
+    <!-- Decorative image placeholder -->
+    <rect x="520" y="180" width="280" height="160" rx="12" fill="#f1f5f9"/>
+    <circle cx="660" cy="260" r="40" fill="#e2e8f0"/>
+
+    <!-- Cards section -->
+    <rect x="40" y="380" width="240" height="160" rx="12" fill="white"/>
+    <rect x="60" y="400" width="200" height="80" rx="6" fill="#f1f5f9"/>
+    <rect x="60" y="496" width="120" height="12" rx="4" fill="#e2e8f0"/>
+    <rect x="60" y="516" width="80" height="12" rx="4" fill="#e2e8f0"/>
+
+    <rect x="300" y="380" width="240" height="160" rx="12" fill="white"/>
+    <rect x="320" y="400" width="200" height="80" rx="6" fill="#f1f5f9"/>
+    <rect x="320" y="496" width="120" height="12" rx="4" fill="#e2e8f0"/>
+    <rect x="320" y="516" width="80" height="12" rx="4" fill="#e2e8f0"/>
+
+    <rect x="560" y="380" width="240" height="160" rx="12" fill="white"/>
+    <rect x="580" y="400" width="200" height="80" rx="6" fill="#f1f5f9"/>
+    <rect x="580" y="496" width="120" height="12" rx="4" fill="#e2e8f0"/>
+    <rect x="580" y="516" width="80" height="12" rx="4" fill="#e2e8f0"/>
+
+    <!-- Footer mock -->
+    <rect x="40" y="560" width="780" height="80" rx="8" fill="white"/>
+    <rect x="60" y="590" width="100" height="12" rx="4" fill="#94a3b8"/>
+    <rect x="180" y="590" width="80" height="12" rx="4" fill="#94a3b8"/>
+    <rect x="280" y="590" width="90" height="12" rx="4" fill="#94a3b8"/>
+  </g>
+
+  <!-- Properties panel -->
+  <g transform="translate(960, 60)" filter="url(#shadowSmall4)">
+    <rect width="260" height="680" rx="16" fill="white"/>
+
+    <!-- Panel header -->
+    <rect width="260" height="52" rx="16" fill="#f8fafc"/>
+    <rect y="36" width="260" height="16" fill="#f8fafc"/>
+    <text x="20" y="33" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0f172a">Properties</text>
+
+    <!-- Element info -->
+    <g transform="translate(20, 68)">
+      <rect width="220" height="40" rx="8" fill="rgba(147, 51, 234, 0.1)"/>
+      <text x="16" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#9333ea">Button Element</text>
+    </g>
+
+    <!-- Background color -->
+    <g transform="translate(20, 130)">
+      <text y="0" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748b">Background</text>
+      <rect y="16" width="220" height="40" rx="8" fill="white" stroke="#e2e8f0"/>
+      <rect x="12" y="26" width="20" height="20" rx="4" fill="#9333ea"/>
+      <text x="44" y="41" font-family="Fira Code, monospace" font-size="12" fill="#0f172a">#9333EA</text>
+      <rect x="180" y="24" width="28" height="24" rx="4" fill="#f1f5f9"/>
+    </g>
+
+    <!-- Text color -->
+    <g transform="translate(20, 210)">
+      <text y="0" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748b">Text Color</text>
+      <rect y="16" width="220" height="40" rx="8" fill="white" stroke="#e2e8f0"/>
+      <rect x="12" y="26" width="20" height="20" rx="4" fill="white" stroke="#e2e8f0"/>
+      <text x="44" y="41" font-family="Fira Code, monospace" font-size="12" fill="#0f172a">#FFFFFF</text>
+    </g>
+
+    <!-- Font size -->
+    <g transform="translate(20, 290)">
+      <text y="0" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748b">Font Size</text>
+      <rect y="16" width="220" height="40" rx="8" fill="white" stroke="#e2e8f0"/>
+      <text x="16" y="41" font-family="Inter, sans-serif" font-size="14" fill="#0f172a">14px</text>
+      <!-- Slider -->
+      <rect x="70" y="30" width="100" height="4" rx="2" fill="#e2e8f0"/>
+      <rect x="70" y="30" width="40" height="4" rx="2" fill="#9333ea"/>
+      <circle cx="110" cy="32" r="8" fill="#9333ea"/>
+    </g>
+
+    <!-- Font weight -->
+    <g transform="translate(20, 370)">
+      <text y="0" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748b">Font Weight</text>
+      <rect y="16" width="220" height="40" rx="8" fill="white" stroke="#e2e8f0"/>
+      <text x="16" y="41" font-family="Inter, sans-serif" font-size="14" fill="#0f172a">Medium (500)</text>
+    </g>
+
+    <!-- Border radius -->
+    <g transform="translate(20, 450)">
+      <text y="0" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748b">Border Radius</text>
+      <rect y="16" width="220" height="40" rx="8" fill="white" stroke="#e2e8f0"/>
+      <text x="16" y="41" font-family="Inter, sans-serif" font-size="14" fill="#0f172a">8px</text>
+      <!-- Slider -->
+      <rect x="70" y="30" width="100" height="4" rx="2" fill="#e2e8f0"/>
+      <rect x="70" y="30" width="30" height="4" rx="2" fill="#9333ea"/>
+      <circle cx="100" cy="32" r="8" fill="#9333ea"/>
+    </g>
+
+    <!-- Padding -->
+    <g transform="translate(20, 530)">
+      <text y="0" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#64748b">Padding</text>
+      <g transform="translate(0, 16)">
+        <rect width="105" height="36" rx="6" fill="white" stroke="#e2e8f0"/>
+        <text x="12" y="24" font-family="Inter, sans-serif" font-size="12" fill="#64748b">X:</text>
+        <text x="30" y="24" font-family="Inter, sans-serif" font-size="13" fill="#0f172a">24px</text>
+
+        <rect x="115" width="105" height="36" rx="6" fill="white" stroke="#e2e8f0"/>
+        <text x="127" y="24" font-family="Inter, sans-serif" font-size="12" fill="#64748b">Y:</text>
+        <text x="145" y="24" font-family="Inter, sans-serif" font-size="13" fill="#0f172a">12px</text>
+      </g>
+    </g>
+
+    <!-- Apply button -->
+    <g transform="translate(20, 610)">
+      <rect width="220" height="44" rx="8" fill="#9333ea"/>
+      <text x="110" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="white">Apply Changes</text>
+    </g>
+  </g>
+
+  <!-- Main headline -->
+  <text x="480" y="770" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="700" fill="#0f172a">Edit Visually, No Code</text>
+  <text x="1020" y="770" font-family="Inter, sans-serif" font-size="18" fill="#475569">Point, click, and customize in real-time.</text>
+
+  <!-- Cursor pointer -->
+  <g transform="translate(200, 350)">
+    <path d="M0 0L0 24L6 18L12 30L16 28L10 16L18 16Z" fill="#0f172a" stroke="white" stroke-width="1.5"/>
+  </g>
+</svg>
