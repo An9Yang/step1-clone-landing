@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Step1 - Design Cloning Tool</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
@@ -13,27 +13,54 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#facc15",
-                        "background-light": "#fafafa",
-                        "surface-light": "#ffffff",
-                        "text-primary": "#0f172a",
-                        "text-secondary": "#475569",
-                        "border-light": "#e2e8f0",
-                        "background-dark": "#09090b",
+                        // Semantic colors (Neo-Glassmorphic Dark Theme)
+                        background: "#09090b",
+                        foreground: "#fafafa",
+                        card: "#18181b",
+                        "card-foreground": "#fafafa",
+                        muted: "#27272a",
+                        "muted-foreground": "#a1a1aa",
+                        primary: "#00d294",
+                        "primary-foreground": "#022c22",
+                        secondary: "#27272a",
+                        "secondary-foreground": "#fafafa",
+                        border: "#27272a",
+                        input: "#27272a",
+                        ring: "#00d294",
+                        destructive: "#ef4444",
+                        // Legacy mappings for compatibility
+                        "background-light": "#09090b",
+                        "surface-light": "#18181b",
+                        "text-primary": "#fafafa",
+                        "text-secondary": "#a1a1aa",
+                        "border-light": "#27272a",
                     },
                     fontFamily: {
-                        display: ["Inter", "sans-serif"],
+                        display: ["Darker Grotesque", "Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
                         mono: ["Fira Code", "monospace"],
                     },
                     borderRadius: {
                         DEFAULT: "0.5rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
                     },
                     boxShadow: {
-                        // 4级专业阴影系统
-                        'elevation-1': '0 2px 4px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06)',
-                        'elevation-2': '0 4px 8px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.08)',
-                        'elevation-3': '0 12px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04)',
-                        'elevation-4': '0 24px 48px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.04)',
+                        // Dark theme shadow system
+                        'xs': '0 1px 2px rgba(0,0,0,0.4)',
+                        'sm': '0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.4)',
+                        'md': '0 4px 6px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4)',
+                        'lg': '0 10px 15px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)',
+                        'xl': '0 20px 25px rgba(0,0,0,0.5), 0 8px 10px rgba(0,0,0,0.4)',
+                        '2xl': '0 25px 50px rgba(0,0,0,0.6)',
+                        // Elevation aliases (updated for dark)
+                        'elevation-1': '0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.4)',
+                        'elevation-2': '0 4px 6px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4)',
+                        'elevation-3': '0 10px 15px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)',
+                        'elevation-4': '0 20px 25px rgba(0,0,0,0.5), 0 8px 10px rgba(0,0,0,0.4)',
+                        // Glass effect glow
+                        'glow-primary': '0 0 20px rgba(0,210,148,0.3)',
+                        'glow-primary-lg': '0 0 40px rgba(0,210,148,0.4)',
                     },
                     transitionTimingFunction: {
                         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
@@ -65,43 +92,78 @@
                             '50%': { backgroundPosition: '100% 50%' },
                             '100%': { backgroundPosition: '0% 50%' }
                         }
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                        'sm': '4px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '24px',
                     }
                 },
             },
         };
     </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b;
+        }
+
+        /* Dark scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #f1f5f9;
+            background: #18181b;
         }
         ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: #3f3f46;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
+            background: #52525b;
         }
+
+        /* Hero gradient - dark emerald version */
         .hero-gradient-overlay {
-            background: radial-gradient(circle at center, rgba(250, 204, 21, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+            background: radial-gradient(circle at center, rgba(0, 210, 148, 0.12) 0%, rgba(9, 9, 11, 0) 70%);
         }
+
+        /* Bento card - dark glass style */
         .bento-card {
-            background: white;
-            border: 1px solid transparent;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.08);
+            background: rgba(24, 24, 27, 0.8);
+            border: 1px solid rgba(39, 39, 42, 0.8);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px);
         }
         .bento-card:hover {
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
-            border-color: rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4);
+            border-color: rgba(0, 210, 148, 0.3);
         }
+
+        /* Dark dots pattern */
         .bg-dots-pattern {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-image: radial-gradient(rgba(63, 63, 70, 0.5) 1px, transparent 1px);
             background-size: 20px 20px;
         }
+
+        /* Glass card utility */
+        .glass-card {
+            background: rgba(24, 24, 27, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Glass header */
+        .glass-header {
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(39, 39, 42, 0.8);
+        }
+
+        /* Carousel */
         .carousel-container {
             perspective: 1200px;
             perspective-origin: center center;
@@ -110,6 +172,17 @@
             transform-style: preserve-3d;
             backface-visibility: hidden;
             transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Primary button glow on hover */
+        .btn-primary-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 210, 148, 0.4);
+        }
+
+        /* Selection color */
+        ::selection {
+            background: rgba(0, 210, 148, 0.3);
+            color: #fafafa;
         }
     </style>
 <script type="importmap">
@@ -123,7 +196,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-background-light text-text-primary transition-colors duration-300 antialiased selection:bg-primary selection:text-black">
+<body class="bg-background text-foreground transition-colors duration-300 antialiased">
     <div id="root"></div>
 <script type="module" src="/index.tsx"></script>
 </body>

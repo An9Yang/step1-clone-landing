@@ -55,9 +55,9 @@ function App() {
   const isLegalPage = currentPage === 'privacy' || currentPage === 'terms';
 
   return (
-    <div className="min-h-screen bg-background-light">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main className={`pt-24 pb-12 ${isLegalPage ? 'bg-white' : ''}`}>
+      <main className={`pt-24 pb-12 ${isLegalPage ? 'bg-card' : ''}`}>
         {renderPage()}
       </main>
       <Footer />

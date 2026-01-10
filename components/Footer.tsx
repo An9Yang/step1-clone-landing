@@ -2,57 +2,57 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-10">
+    <footer className="bg-muted/30 border-t border-border pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <svg className="w-8 h-8" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="181.119" height="181.119" rx="40" fill="white" stroke="#e2e8f0" strokeWidth="2"/>
-                <path d="M55.7429 76.0664L105.052 55.7429L125.376 105.052" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M76.0664 125.376L105.052 55.7429" stroke="black" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+                <rect width="181.119" height="181.119" rx="40" fill="#18181b" stroke="#27272a" strokeWidth="2"/>
+                <path d="M55.7429 76.0664L105.052 55.7429L125.376 105.052" stroke="#fafafa" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M76.0664 125.376L105.052 55.7429" stroke="#fafafa" strokeWidth="10.6667" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span className="font-bold text-xl text-slate-900">Step1</span>
+              <span className="font-bold text-xl text-foreground">Step1</span>
             </div>
-            <p className="text-slate-500 text-sm mb-6 max-w-xs leading-relaxed">
+            <p className="text-muted-foreground text-sm mb-6 max-w-xs leading-relaxed">
               Tools for modern web design and cloning for everyone.
             </p>
             <div className="flex gap-4">
-              <a className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all shadow-sm" href="#"><span className="material-icons-round text-sm">adb</span></a>
-              <a className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all shadow-sm" href="#"><span className="material-icons-round text-sm">alternate_email</span></a>
-              <a className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all shadow-sm" href="#"><span className="material-icons-round text-sm">group</span></a>
+              <a className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all shadow-sm" href="#"><span className="material-icons-round text-sm">adb</span></a>
+              <a className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all shadow-sm" href="#"><span className="material-icons-round text-sm">alternate_email</span></a>
+              <a className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all shadow-sm" href="#"><span className="material-icons-round text-sm">group</span></a>
             </div>
           </div>
           <div>
-            <h4 className="text-slate-900 font-bold mb-4 text-sm uppercase tracking-wider">Product</h4>
-            <ul className="space-y-3 text-sm text-slate-600">
+            <h4 className="text-foreground font-bold mb-4 text-sm uppercase tracking-wider">Product</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li><a className="hover:text-primary transition-colors" href="#">Pricing</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Showcase</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Chrome Extension</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-slate-900 font-bold mb-4 text-sm uppercase tracking-wider">Resources</h4>
-            <ul className="space-y-3 text-sm text-slate-600">
+            <h4 className="text-foreground font-bold mb-4 text-sm uppercase tracking-wider">Resources</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li><a className="hover:text-primary transition-colors" href="#">Help Center</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Quick Start</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Updates</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-slate-900 font-bold mb-4 text-sm uppercase tracking-wider">Company</h4>
-            <ul className="space-y-3 text-sm text-slate-600">
+            <h4 className="text-foreground font-bold mb-4 text-sm uppercase tracking-wider">Company</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li><a className="hover:text-primary transition-colors" href="#">About</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Careers</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© 2025 Step1. All rights reserved.</p>
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
+          <p>&copy; 2025 Step1. All rights reserved.</p>
           <div className="flex gap-8 mt-4 md:mt-0">
-            <a className="hover:text-slate-900 transition-colors" href="#privacy">Privacy Policy</a>
-            <a className="hover:text-slate-900 transition-colors" href="#terms">Terms of Service</a>
+            <a className="hover:text-foreground transition-colors" href="#privacy">Privacy Policy</a>
+            <a className="hover:text-foreground transition-colors" href="#terms">Terms of Service</a>
           </div>
         </div>
       </div>
